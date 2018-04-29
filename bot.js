@@ -15,9 +15,11 @@ bot.on("message", async message => {
   var cmd= message.content.split(prefix)[1].substring(1, message.content.split(prefix)[1].length)
   console.log(cmd)
 
-  if (cmd === "roll dice"){
-    var randomnumber = Math.floor((Math.random() * 6) + 1);
-    message.channel.send(":game-die: Rolling Dice... You rolled a " + randomnumber + "!");
+  if (cmd.includes("roll dice")){
+    if (cmd.split("roll dice")[1] >= 1 && cmd.split("roll dice")[1] <= 6){
+      var randomnumber = Math.floor((Math.random() * 6) + 1);
+      message.channel.send(":game-die: Rolling Dice... You rolled a " + randomnumber + "!");
+    }
   }else{
     message.channel.send("Invalid game. Use " + prefix + " (Game) to play a game!");
   }
