@@ -16,7 +16,7 @@ bot.on("message", async message => {
   console.log(cmd)
 
   if (cmd === "roll dice"){
-    var randomnumber = math.floor(math.random() * 6)+ 1)
+    var randomnumber = Math.floor(Mathj.random() * 6) + 1);
     message.channel.send("Rolling Dice... You rolled a " + randomnumber + "!");
   }else{
     message.channel.send("Invalid game. Use " + prefix + " (Game) to play a game!");
