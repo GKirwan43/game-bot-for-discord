@@ -30,10 +30,11 @@ bot.on("message", async message => {
     }
   }else if (cmd.includes("giveaway")){
     if (cmd.split("giveaway ")[1] >= 100){
-      message.channel.send(message.author + " is giving away " + cmd.split("giveaway ")[1] + " Credits! React using 🎉 below to enter the giveaway! You have 10 seconds to enter!");
+      var giveawaymessage = message.author + " is giving away " + cmd.split("giveaway ")[1] + " Credits! React using 🎉 below to enter the giveaway! You have 10 seconds to enter!"
+      message.channel.send(giveawaymessage);
       bot.on("message", async botmessage => {
         console.log(botmessage.author);
-        if (botmessage.author == "Game Bot#0382"){
+        if (botmessage.content == giveawaymessage){
           botmessage.react("🎉");
         }
       });
