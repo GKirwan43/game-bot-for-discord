@@ -29,9 +29,9 @@ bot.on("message", async message => {
       message.channel.send("Must select a number 1 - 6.");
     }
   }else if (cmd.includes("giveaway")){
-    if (cmd.split("giveaway")[1] >= 100){
-      var randomnumber = Math.floor((Math.random() * 6) + 1);
-      message.channel.send("Rolling Dice... You rolled a " + randomnumber + "!");
+    if (cmd.split("giveaway ")[1] >= 100){
+      message.channel.send(message.author + " is giving away " + cmd.split("giveaway ")[1] + " Credits! React using the emoji below to enter the giveaway!");
+      message.react("🎉")
     }else{
       message.channel.send("Giveaway size must be 100 credits or larger!");
     }
