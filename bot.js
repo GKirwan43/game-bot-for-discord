@@ -11,14 +11,14 @@ bot.on("message", async message => {
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
 
-  var prefix = '-';
+  var prefix = '!g';
   var cmd= message.content.split(prefix)[1]
   console.log(cmd)
 
-  if (cmd === "playgame roll dice"){
+  if (cmd === "roll dice"){
     message.channel.send("Rolling Dice... You rolled a 5!");
-  }else if (cmd.includes("playgame")){
-    message.channel.send("Invalid game. Use" + prefix + "playgame (Game) to play a game!");
+  }else{
+    message.channel.send("Invalid game. Use " + prefix + " (Game) to play a game!");
   }
 });
 
