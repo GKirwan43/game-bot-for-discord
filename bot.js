@@ -12,10 +12,10 @@ bot.on("message", async message => {
   if (message.channel.type === "dm") return;
 
   var prefix = '!g';
-  var cmd= message.content.split(prefix)[1]
+  var cmd= message.content.split(prefix)[1].substring(1, message.content.split(prefix)[1].length)
   console.log(cmd)
 
-  if (cmd === " roll dice"){
+  if (cmd === "roll dice"){
     message.channel.send("Rolling Dice... You rolled a 5!");
   }else{
     message.channel.send("Invalid game. Use " + prefix + " (Game) to play a game!");
