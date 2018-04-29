@@ -35,7 +35,7 @@ bot.on("message", async message => {
         if (botmessage.author == "Game Bot#0382"){
           botmessage.react("🎉")
         }
-      }
+      );
     }else{
       message.channel.send("Giveaway size must be 100 credits or larger!");
     }
