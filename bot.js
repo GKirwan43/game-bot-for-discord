@@ -37,8 +37,7 @@ bot.on("message", async message => {
           botmessage.react("🎉");
         }
       });
-      setTimeout(1000);
-      message.channel.send("The winner is:");
+      setTimeout(function(){message.channel.send("The winner is:");},10000);
     }else{
       message.channel.send("Giveaway size must be 100 credits or larger!");
     }
