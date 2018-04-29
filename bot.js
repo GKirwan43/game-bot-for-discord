@@ -18,7 +18,7 @@ bot.on("message", async message => {
   if (cmd.includes("roll dice")){
     if (cmd.split("roll dice")[1] >= 1 && cmd.split("roll dice")[1] <= 6){
       var randomnumber = Math.floor((Math.random() * 6) + 1);
-      message.channel.send(":game-die: Rolling Dice... You rolled a " + randomnumber + "!");
+      message.channel.send("&#127922; Rolling Dice... You rolled a " + randomnumber + "!");
     }else{
       message.channel.send("Must select a number 1 - 6.");
     }
