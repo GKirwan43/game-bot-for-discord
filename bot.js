@@ -33,9 +33,8 @@ bot.on("message", async message => {
       var giveawaymessage = message.author + " is giving away " + cmd.split("giveaway ")[1] + " Credits! React using 🎉 below to enter the giveaway! You have 10 seconds to enter!"
       message.channel.send(giveawaymessage);
       bot.on("message", async botmessage => {
-        console.log(botmessage.content);
-        console.log(giveawaymessage);
-        if (botmessage.author == <440185347733979147> && botmessage.content == giveawaymessage){
+        console.log(botmessage.author);
+        if (botmessage.author == "440185347733979147" && botmessage.content == giveawaymessage){
           botmessage.react("🎉");
         }
       });
