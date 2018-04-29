@@ -33,7 +33,7 @@ bot.on("message", async message => {
       message.channel.send(message.author + " is giving away " + cmd.split("giveaway ")[1] + " Credits! React using 🎉 below to enter the giveaway! You have 10 seconds to enter!");
       bot.on("message", async botmessage => {
         if (botmessage.author == "Game Bot#0382"){
-          botmessage.react("🎉")
+          botmessage.react("🎉");
         }
       );
     }else{
