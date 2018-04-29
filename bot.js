@@ -14,9 +14,9 @@ bot.on("message", async message => {
   let prefix = '-';
   let cmd= message.content.split("-")
 
-  if (cmd === `${prefix}playgamerolldice`){
+  if (cmd === `playgamerolldice`){
     message.channel.send("Rolling Dice... You rolled a 5!");
-  }else if (cmd === `${prefix}playgame`){
+  }else if (cmd === `playgame`){
     message.channel.send("Select a game");
   }
 });
