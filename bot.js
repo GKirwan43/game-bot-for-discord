@@ -12,7 +12,7 @@ bot.on("message", async message => {
   if (message.channel.type === "dm") return;
 
   let prefix = '-';
-  let cmd= message.content.split("-")
+  var cmd= message.content.split("-")
   console.log(cmd)
 
   if (cmd === `playgamerolldice`){
