@@ -18,7 +18,7 @@ bot.on("message", async message => {
   if (cmd === "playgame roll dice"){
     message.channel.send("Rolling Dice... You rolled a 5!");
   }else if (cmd.inclues("playgame")){
-    message.channel.send("Invalid game. Use" .. prefix .. "playgame (Game) to play a game!");
+    message.channel.send("Invalid game. Use ${prefix}playgame (Game) to play a game!");
   }
 });
 
