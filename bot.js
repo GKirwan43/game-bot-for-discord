@@ -34,7 +34,7 @@ bot.on("message", async message => {
       message.channel.send(giveawaymessage);
       bot.on("message", async botmessage => {
         console.log(botmessage.author);
-        if (botmessage.author == <@440185347733979147> && botmessage.content == giveawaymessage){
+        if (botmessage.author == "<@440185347733979147>" && botmessage.content == giveawaymessage){
           botmessage.react("🎉");
         }
       });
