@@ -17,11 +17,17 @@ bot.on("message", async message => {
 
   if (cmd.includes("roll dice")){
     if (cmd.split("roll dice")[1] >= 1 && cmd.split("roll dice")[1] <= 6){
-      const ayy = client.emojis.find("name", "ayy");
       var randomnumber = Math.floor((Math.random() * 6) + 1);
-      message.channel.send(ayy + "Rolling Dice... You rolled a " + randomnumber + "!");
+      message.channel.send("@" + message.author +" Rolling Dice... You rolled a " + randomnumber + "!");
     }else{
       message.channel.send("Must select a number 1 - 6.");
+    }
+  }else if (cmd.includes("giveaway")){
+    if (cmd.split("giveaway")[1] >= 100){
+      var randomnumber = Math.floor((Math.random() * 6) + 1);
+      message.channel.send("Rolling Dice... You rolled a " + randomnumber + "!");
+    }else{
+      message.channel.send("Giveaway size must be 100 credits or larger!");
     }
   }else{
     message.channel.send("Invalid game. Use " + prefix + " (Game) to play a game!");
