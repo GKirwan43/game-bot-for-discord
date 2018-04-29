@@ -18,7 +18,9 @@ bot.on("message", async message => {
   if (cmd.includes("roll dice")){
     if (cmd.split("roll dice")[1] >= 1 && cmd.split("roll dice")[1] <= 6){
       var randomnumber = Math.floor((Math.random() * 6) + 1);
-      if (toString(randomnumber) == cmd.split("roll dice ")[1]){
+      console.log(randomnumber)
+      console.log(cmd.split("roll dice")[1])
+      if (toString(randomnumber) == cmd.split("roll dice")[1]){
         message.channel.send("Rolling Dice... " + message.author + " rolled a " + randomnumber + "! You won 10 credits!");
       }else{
         message.channel.send("Rolling Dice... " + message.author + " rolled a " + randomnumber + "! You lost 10 credits!");
