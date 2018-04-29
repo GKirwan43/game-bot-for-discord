@@ -21,10 +21,6 @@ bot.on("message", async message => {
       message.channel.send("Rolling Dice... You rolled a 5!");
     }
   }
-  else{
-      message.channel.send("Please select a game.");
-    }
-  }
 });
 
 bot.login(process.env.token);
