@@ -12,9 +12,7 @@ bot.on("message", async message => {
   if (message.channel.type === "dm") return;
 
   let prefix = '-';
-  let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
-  let args = messageArray.slice(1);
+  let cmd= message.content.split("-")
 
   if (cmd === `${prefix}playgamerolldice`){
     message.channel.send("Rolling Dice... You rolled a 5!");
