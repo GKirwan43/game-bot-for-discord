@@ -31,7 +31,7 @@ bot.on("message", async message => {
   }else if (cmd.includes("giveaway")){
     if (cmd.split("giveaway ")[1] >= 100){
       message.channel.send(message.author + " is giving away " + cmd.split("giveaway ")[1] + " Credits! React using 🎉 below to enter the giveaway! You have 10 seconds to enter!");
-      message.reaction("🎉")
+      bot.reaction("🎉")
     }else{
       message.channel.send("Giveaway size must be 100 credits or larger!");
     }
