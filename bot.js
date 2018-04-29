@@ -17,7 +17,7 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
 
   if (cmd === `${prefix}playgame`){
-    if (cmd === "${prefix}playgame roll dice"){
+    if (cmd === `${prefix}playgame roll dice`){
       message.channel.send("Rolling Dice... You rolled a 5!");
     }
   }
