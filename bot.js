@@ -35,7 +35,7 @@ bot.on("message", async message => {
       bot.on("message", async botmessage => {
         console.log(botmessage.content);
         console.log(giveawaymessage);
-        if (botmessage.content == giveawaymessage){
+        if (botmessage.author == "<440185347733979147>" && botmessage.content == giveawaymessage){
           botmessage.react("🎉");
         }
       });
